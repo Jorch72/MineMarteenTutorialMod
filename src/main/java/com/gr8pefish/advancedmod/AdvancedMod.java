@@ -1,5 +1,6 @@
 package com.gr8pefish.advancedmod;
 
+import com.gr8pefish.advancedmod.init.ModBlocks;
 import com.gr8pefish.advancedmod.proxy.CommonProxy;
 import com.gr8pefish.advancedmod.reference.Reference;
 import com.gr8pefish.advancedmod.utility.Log;
@@ -20,6 +21,7 @@ public class AdvancedMod{
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event){
+        ModBlocks.init();
         proxy.preInit();
         Log.info("Pre Initialization Complete!");
     }
